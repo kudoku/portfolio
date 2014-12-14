@@ -1,0 +1,12 @@
+<% provide(:title, "Landing") %>
+<html>
+<h1>Welcome to the Landing Page</h1>
+
+<h2>Well what do you want to do?</h2>
+	<p>
+		Want to know more <%= link_to 'about', about_path %> me?<br></br>
+		<%= link_to 'Want to see me?', contact_path %><br></br>
+		No? How about my <%= link_to 'work?', projects_path %>
+	</p>
+
+</html>
