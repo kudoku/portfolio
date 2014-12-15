@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+<nav>
+	<div class="container-fluid">
+		<%= link_to 'Home', launchpad_path, class: 'btn btn-default' %>
+		<%= link_to 'About', about_path, class: 'btn btn-default' %>
+		<%= link_to 'Contact', contact_path, class: 'btn btn-default' %>
+		<%= link_to 'Projects', projects_path, class: 'btn btn-default' %>
+		<div class="dropdown">
+		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+		    Dropdown
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+		  </ul>
+		</div>
+	</div>
+</nav>
+</head>
