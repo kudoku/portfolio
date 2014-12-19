@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
-  root                          'static_pages#landing', as: 'launchpad'
+  root 'static_pages#landing', as: 'launchpad'
 
-  get     'about'         =>    'static_pages#about'
-  get     'contact'       =>    'static_pages#contact'
-  get     'projects'      =>    'static_pages#projects'
+  get '/about' => 'static_pages#about'
+  get '/contact'  => 'static_pages#contact'
+  get '/projects' => 'static_pages#projects'
 
-  get     'posts'         =>    'posts#new'
+  get '/posts' => 'posts#new'
 
   resources :posts do
-    resources :comments, except: :index
+    resources :comments, except: [:index, :show]
   end
+  
+  devise_for :users, :controllers => { registrations: 'registrations' }
+  resources :users, :only => [:show, :index]
+  get '/profile', to: 'users#profile', as: :profile
 
 
   # The priority is based upon order of creation: first created -> highest priority.
