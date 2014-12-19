@@ -1,2 +1,20 @@
 <h1>Posts#new</h1>
 <p>Find me in app/views/posts/new.html.erb</p>
+
+
+<% provide(:title, 'Post') %>
+<h1>Post</h1>
+
+<div class="row">
+  <div class="col-md-20 col-md-offset-3">
+    <%= form_for(@post) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+
+      <%= f.submit "Post", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
