@@ -1,6 +1,14 @@
-Profile
+<h3>Profile</h3> 
 
-<%= @user.name %>
-<%= @user.bio %>
+<p>NAME: <%= @user.name %></p> 
+<p>BIO: <%= @user.bio %></p> 
 
-<%= link_to  %>
+<%= link_to 'New Post', new_post_path %>
+
+<h3>Posts</h3>
+
+<% @user.posts.each do |post| %>
+	<p>TITLE:  <%= post.name %>  <%= link_to 'Delete Post', post_path(post), method: :delete %></p>
+	<p>CONTENT: <%= post.content %></p>
+
+<% end %>

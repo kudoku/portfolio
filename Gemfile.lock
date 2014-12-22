@@ -29,6 +29,8 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.4.3)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (3.0.1.20140826)
+      execjs
     bcrypt (3.1.9)
     better_errors (2.0.0)
       coderay (>= 1.0.0)
@@ -198,10 +200,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bcrypt
   better_errors
   binding_of_caller
-  bootstrap-sass (>= 3.2.0.0)
+  bootstrap-sass
   bootstrap-will_paginate (= 0.0.10)
   coffee-rails (~> 4.0.0)
   devise

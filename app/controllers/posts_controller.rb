@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to '#'
+    redirect_to profile_path
   end
 
 
@@ -48,6 +48,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:name, :content)
   end
 end

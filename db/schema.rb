@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20141219025000) do
     t.inet     "last_sign_in_ip"
     t.text     "bio"
     t.string   "name"
+    t.string   "username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
