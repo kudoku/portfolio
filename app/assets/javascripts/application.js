@@ -13,5 +13,35 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require_tree .
+
+
+$(function() {
+
+	$("#project-link").bind("click", function() {
+		alert("projects");
+		$("#projects").show();
+		$("#about").hide();
+		$("#home").hide();
+	});
+
+	$("#about-link").bind("click", function() {
+		alert("about");
+		$("#about").show();
+		$("#projects").hide();
+		$("#home").hide();
+
+	});
+
+	$("#home-link").bind("click", function() {
+		alert("home");
+		$("#home").show();
+		$("#projects").hide();
+		$("#about").hide();
+	});
+
+	$('.carousel').carousel({interval: 7000});
+
+});

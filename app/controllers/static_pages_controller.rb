@@ -7,6 +7,9 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+    respond_to do |format|
+      format.js
+    end
   end
 
   def projects

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#landing', as: 'launchpad'
 
   get '/about' => 'static_pages#about'
-  get '/contact'  => 'static_pages#contact'
+  get '/contact'  => 'static_pages#contact', as: 'contact'
   get '/projects' => 'static_pages#projects'
 
   get '/posts' => 'posts#new'
@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations', :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :users, :only => [:show, :index]
   get '/profile', to: 'users#profile', as: :profile
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
